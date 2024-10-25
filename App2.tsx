@@ -6,12 +6,13 @@ const App2 = () => {
     const openWebsite = async (url: string) => {
         await Linking.openURL(url);
         // Checking if the link is supported for links with custom URL scheme.
-        // const supported = await Linking.canOpenURL(url);
+        // const supported = await Linking.canOpenURL('https://youtu.be/eL5qYJ7y68k?si=rql0AjIoozZyNUoY');
         // if (supported) {
-        //   // Opening the link with some app, if the URL scheme is "http" the web link should be opened
-        //   // by some browser in the mobile
-        //   Alert.alert(`Don't know how to open this URL: ${url}`);
+        //     // Opening the link with some app, if the URL scheme is "http" the web link should be opened
+        //     // by some browser in the mobile
+        //     Alert.alert('link opened')
         // } else {
+        //     Alert.alert(`Don't know how to open this URL: ${url}`);
         // }
     };
 
@@ -44,21 +45,21 @@ const App2 = () => {
 
     return (
         <SafeAreaView>
-            <ScrollView>
+            <ScrollView style={styles.background}>
                 <View>
                     <Text style={styles.headingText}>Flat cards</Text>
                     <View style={styles.container}>
                         <View style={[styles.card, styles.cardOne]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>First</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>First</Text>
                         </View>
                         <View style={[styles.card, styles.cardTwo]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Second</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Second</Text>
                         </View>
                         <View style={[styles.card, styles.cardThree]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Third</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Third</Text>
                         </View>
                         <View style={[styles.card, styles.cardFour]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Fourth</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Fourth</Text>
                         </View>
                     </View>
                 </View>
@@ -73,25 +74,25 @@ const App2 = () => {
                         // shadowOffset: { width: 7, height: 2 },
                     }} showsHorizontalScrollIndicator={false}>
                         <View style={[styles.card, styles.cardOne]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>First</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>First</Text>
                         </View>
                         <View style={[styles.card, styles.cardTwo]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Second</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Second</Text>
                         </View>
                         <View style={[styles.card, styles.cardThree]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Third</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Third</Text>
                         </View>
                         <View style={[styles.card, styles.cardFour]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Fourth</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Fourth</Text>
                         </View>
                         <View style={[styles.card, styles.cardFour]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>Fifth</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>Fifth</Text>
                         </View>
                         <View style={[styles.card, styles.cardFour]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>sixth</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>sixth</Text>
                         </View>
                         <View style={[styles.card, styles.cardFour, { marginRight: 20 }]}>
-                            <Text style={{ fontWeight: 'bold', fontSize: 15 }}>seventh</Text>
+                            <Text style={{ fontWeight: 'bold', fontSize: 15, color: 'white' }}>seventh</Text>
                         </View>
                     </ScrollView>
                 </View>
@@ -249,12 +250,15 @@ const App2 = () => {
 export default App2
 
 const styles = StyleSheet.create({
+    background: {
+        backgroundColor: 'black'
+    },
     headingText: {
         fontSize: 25,
         marginTop: 10,
         fontWeight: 'bold',
-        color: 'red',
-        textAlign: 'center'
+        color: 'white',
+        textAlign: 'center',
     },
     container: {
         width: '100%',
@@ -394,7 +398,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 8,
         marginBottom: 4
-        
+
     },
     userCard: {
         flex: 1,
@@ -404,7 +408,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#8D3DAF',
         padding: 8,
         borderRadius: 10,
-        marginVertical:6
+        marginVertical: 6
     },
     userImage: {
         width: 60,

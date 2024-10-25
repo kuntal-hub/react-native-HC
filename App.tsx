@@ -64,6 +64,8 @@ export default function App(): React.ReactElement {
             ref={textRef}
             placeholder='Enter your name'
             defaultValue={text}
+            keyboardType='default'
+            enterKeyHint='go'
             onChangeText={(text) => setText(text)}
           />
 
@@ -84,25 +86,25 @@ export default function App(): React.ReactElement {
 
         </View>
       </ScrollView>
-          <FlatList
-            scrollEnabled={true}
-            data={[
-              { key: 'Devin' },
-              { key: 'Dan' },
-              { key: 'Dominic' },
-              { key: 'Jackson' },
-              { key: 'James' },
-              { key: 'Joel' },
-              { key: 'John' },
-              { key: 'Jillian' },
-              { key: 'Jimmy' },
-              { key: 'Julie' },
-              { key: 'Julie1' },
-              { key: 'Julie2' },
-              { key: 'Julie3' },
-            ]}
-            renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
-          />
+      <FlatList
+        scrollEnabled={true}
+        data={[
+          { key: 'Devin' },
+          { key: 'Dan' },
+          { key: 'Dominic' },
+          { key: 'Jackson' },
+          { key: 'James' },
+          { key: 'Joel' },
+          { key: 'John' },
+          { key: 'Jillian' },
+          { key: 'Jimmy' },
+          { key: 'Julie' },
+          { key: 'Julie1' },
+          { key: 'Julie2' },
+          { key: 'Julie3' },
+        ]}
+        renderItem={({ item }) => <Text style={styles.item}>{item.key}</Text>}
+      />
     </SafeAreaView>
   )
 }
