@@ -67,7 +67,7 @@ function App(): JSX.Element {
                 break;
         }
 
-        // ReactNativeHapticFeedback.trigger("impactLight", options);
+        ReactNativeHapticFeedback.trigger("impactLight", options);
     }
 
     return (
